@@ -1,0 +1,13 @@
+body {
+  width: 100vw
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 6px;
+}
