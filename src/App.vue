@@ -1,13 +1,15 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view/>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  created () {
+    this.$store.dispatch('getUserInfo')
+  }
 }
 </script>
 
@@ -18,6 +20,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+</style>
+
+<style>
+.el-form-item__label {
+  font-weight: 600;
+  color: black
 }
 </style>
