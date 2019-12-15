@@ -1,15 +1,31 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from '@/pages/Index'
+import Index from '@/pages/index'
+import Login from '@/pages/login'
+import User from '@/pages/user'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/index',
       name: 'index',
       component: Index
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login
+    },
+    {
+      path: '/userPage',
+      name: 'userPage',
+      component: User
+    },
+    {
+      path: '*',
+      redirect: '/index'
     }
   ]
 })
